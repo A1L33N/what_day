@@ -1,16 +1,9 @@
 require('rspec')
 require('time_commits')
 
+
 describe ("Time#what_day") do
-  it("returns if you can sleep in or not") do
-    today = Time.now()
-    expect((today).what_day()).to(eq("Wake up!"))
+  it("tells you if you can sleep in based on what day it is") do
+    expect(("8/1/2015").what_day()).to(eq("It's the weekend! You can sleep in!"))
   end
 end
-# 
-# describe ("Time#what_day") do
-#   it("creates a time object based on input") do
-#     entered_date = self.Time.new()
-#     expect((self).what_day()).to(eq(self.Time.new()))
-#   end
-# end
