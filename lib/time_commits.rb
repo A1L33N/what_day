@@ -2,11 +2,11 @@ class String
   define_method(:what_day) do
     date_array = self.split("/")  # gives us year, month, day in array
     today = Time.new(date_array[2], date_array[0], date_array[1])
-
+    weekday = today.strftime("%A")
     if today.saturday?() || today.sunday?()
-      "It's the weekend! You can sleep in!"
+      "It's " + weekday + "! You can sleep in!"
     else
-      "Wake up!"
+      "It is " + weekday + ". Wake up!"
     end
   end
 end
